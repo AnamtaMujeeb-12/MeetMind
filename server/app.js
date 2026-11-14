@@ -18,14 +18,6 @@ app.use("/api/auth", auth_routes);
 app.use("/api/meetings", meeting_routes);
 app.use("/api/tasks", task_routes);
 
-// ---- serve React app (used after deployment) ----
-const dist = path.join(here, "../client/dist");
-app.use(express.static(dist));
-app.use((req, res, next) => {
-  if (req.method !== "GET" || req.path.startsWith("/api") || req.path.startsWith("/uploads")) return next();
-  res.sendFile(path.join(dist, "index.html"));
-});
-// -------------------------------------------------
 
 app.use((err, _req, res, _next) => {
   console.error(err);
