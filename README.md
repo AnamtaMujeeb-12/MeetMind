@@ -21,13 +21,12 @@ AI-based meeting insight and task management web app. Upload a recorded meeting 
 - Hindi, English and Hinglish support
 - Save meetings and tasks in MongoDB
 - Assign tasks, set deadlines and update task status
-- Email reminders through Nodemailer (optional SMTP configuration)
 - Meeting history and meeting detail pages
 
 **No Chrome extension or live Google Meet capture is included.** Users record meetings separately and upload the audio file.
 
 ## Tech stack
-React (Vite), Node.js, Express, MongoDB (Mongoose), JWT, Groq (Whisper and LLM), Nodemailer
+React (Vite), Node.js, Express, MongoDB (Mongoose), JWT, Groq (Whisper and LLM)
 
 ## Run locally
 
@@ -46,7 +45,6 @@ Frontend: in `client`, run `npm install` and `npm run dev`, then open the Vite U
 
 ## Notes
 - Keep `.env` private. Never commit API keys or database credentials.
-- Email reminders are optional. Without SMTP settings the app still works.
 - AI-extracted names, tasks and deadlines can be wrong. Review them before assigning work.
 - If nobody states a task owner's name in the meeting, the assignee stays empty and can be set manually.
 - Users must have permission to record and upload meeting audio.
